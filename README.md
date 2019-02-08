@@ -1,4 +1,4 @@
-# Web Crowler - General info
+# Web Crawler - General info
 
 This is a simple function which that takes a site URL as an argument and creates a mapping of that domain as a Python dictionary.  
 
