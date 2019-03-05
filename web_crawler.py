@@ -19,6 +19,10 @@ def site_map(enter_url):
 
     print('New site map is being created, it may takes a while, if it is a big website, please wait')
 
+    # if given url end with '/' strips it (it prevent double "//").
+    if enter_url.endswith('/'):
+        enter_url = enter_url.strip('/')
+
     # empty dictionary which will contain site map
 
     dictionary = {}
@@ -81,5 +85,6 @@ def site_map(enter_url):
     return dictionary
 
 
-enter_url = input("Please enter a URL (including 'http://'). Then You will receive a map of that domain:\n")
-print(site_map(enter_url))
+if __name__ == '__main__':
+    enter_url = input("Please enter a URL (including 'http://'). Then You will receive a map of that domain:\n")
+    print(site_map(enter_url))
