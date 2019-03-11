@@ -1,6 +1,7 @@
 # Web Crawler - General info
 
-This is a simple function which that takes a site URL as an argument and creates a mapping of that domain as a Python dictionary.  
+Python Internship Tasks 2.
+General task was to write a Python function which takes a site URL as an argument and creates a mapping of that domain as a Python dictionary.  
 
 ## Technologies:
 
