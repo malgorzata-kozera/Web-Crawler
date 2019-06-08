@@ -3,27 +3,23 @@ from bs4 import BeautifulSoup as bs
 from requests.exceptions import InvalidSchema, ConnectionError,MissingSchema
 import sys
 
-'''
-site_map()
-
-Function takes as an argument site base url path (including 'http://') and returns mapping
-of that domain as a Python dictionary:
-key: URL
-* value: dictionary with:
-** site title (HTML `<title>` tag)
-** links - set of all target URLs within the domain on the page but without anchor links
-'''
-
 
 def site_map(enter_url):
+    ''' Function takes as an argument site base url path (including 'http://')
+    and returns mapping of that domain as a Python dictionary:
+    key: URL
+    * value: dictionary with:
+    ** site title (HTML `<title>` tag)
+    ** links - set of all target URLs within the domain on the page but without
+     anchor links
+    '''
 
     print('New site map is being created, it may takes a while, if it is a big website, please wait')
 
     # if given url end with '/' strips it (it prevent double "//").
+
     if enter_url.endswith('/'):
         enter_url = enter_url.strip('/')
-
-    # empty dictionary which will contain site map
 
     dictionary = {}
     url_to_do = {enter_url}
