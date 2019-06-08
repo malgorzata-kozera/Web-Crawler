@@ -24,7 +24,7 @@ def site_map(enter_url):
     dictionary = {}
     url_to_do = {enter_url}
 
-    while len(url_to_do) > 0:
+    while url_to_do:
 
         url_base = enter_url
         url = url_to_do.pop()
